@@ -277,7 +277,7 @@
         // 2. KHỐI TRÁI TIM ĐƯỢC TẠO TỪ NHIỀU TRÁI TIM NHỎ
         function create3DHeart() {
             items.length = 0;
-            let numParticles = Math.min(w, h) < 500 ? 2500 : 5000;
+            let numParticles = Math.min(w, h) < 500 ? 2000 : 4000;
             let heartScale = Math.min(w, h) * 0.20;
 
             let count = 0;
@@ -768,7 +768,7 @@ let beatScale = 1 + Math.sin(heartBeat) * 0.18;
     galaxyHearts.length = 0;
     
     // Tăng số lượng hạt tim để đĩa dày dặn hơn
-    let numHearts = 2500; 
+    let numHearts = 2000; 
     let numTexts = 40; 
     
     // Bán kính đĩa ngân hà
