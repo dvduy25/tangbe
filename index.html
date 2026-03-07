@@ -170,17 +170,17 @@
         const tenNguoiYeu = "Bé Heo";
 
         const urlAnhThucTe = [
-            "anh/anh1.jpg",
-            "anh/anh2.jpg",
-            "anh/anh3.jpg",
-            "anh/anh4.jpg",
-            "anh/anh5.jpg",
-            "anh/anh6.jpg",
-            "anh/anh7.jpg",
-            "anh/anh8.jpg",
-            "anh/anh9.jpg",
-            "anh/anh10.jpg",
-            "anh/anh11.jpg",
+            // "anh/anh1.jpg",
+            // "anh/anh2.jpg",
+            // "anh/anh3.jpg",
+            // "anh/anh4.jpg",
+            // "anh/anh5.jpg",
+            // "anh/anh6.jpg",
+            // "anh/anh7.jpg",
+            // "anh/anh8.jpg",
+            // "anh/anh9.jpg",
+            // "anh/anh10.jpg",
+            // "anh/anh11.jpg",
             "anh/anh12.jpg",
             "anh/anh13.jpg",
             "anh/anh14.jpg",
@@ -342,7 +342,7 @@
 
         // 3. VỆ TINH BAY ÊM ÁI
         function createOrbitingItems() {
-            let numImages = 20;
+            let numImages = 10;
             let numTexts = 10;
             let baseOrbitRadius = Math.min(w, h) * 0.45;
 
@@ -548,7 +548,7 @@ let beatScale = 1 + Math.sin(heartBeat) * 0.18;
             for (let i = comets.length - 1; i >= 0; i--) {
                 let c = comets[i];
                 c.history.push({ x: c.x, y: c.y, z: c.z });
-                if (c.history.length > 15) c.history.shift(); // Giới hạn chiều dài đuôi
+                if (c.history.length > 6) c.history.shift(); // Giới hạn chiều dài đuôi
 
                 c.x += c.vx;
                 c.y += c.vy;
@@ -662,7 +662,7 @@ let beatScale = 1 + Math.sin(heartBeat) * 0.18;
                 item.screenX = proj.screenX; item.screenY = proj.screenY; item.screenZ = proj.screenZ; item.scale = proj.scale;
             });
 
-            items.sort((a, b) => b.screenZ - a.screenZ);
+            // items.sort((a, b) => b.screenZ - a.screenZ);
 
             items.forEach(item => {
                 if (item.scale < 0) return;
