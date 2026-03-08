@@ -230,15 +230,9 @@
         let startX = 0, startY = 0;
 
         function resize() {
-
-    let scale = window.devicePixelRatio > 1 ? 0.7 : 1;
-
-    w = canvas.width = window.innerWidth * scale;
-    h = canvas.height = window.innerHeight * scale;
-
-    canvas.style.width = window.innerWidth + "px";
-    canvas.style.height = window.innerHeight + "px";
-}
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+        }
         window.addEventListener('resize', resize);
         resize();
 
