@@ -277,7 +277,7 @@
         // 2. KHỐI TRÁI TIM ĐƯỢC TẠO TỪ NHIỀU TRÁI TIM NHỎ
         function create3DHeart() {
             items.length = 0;
-            let numParticles = Math.min(w, h) < 500 ? 500 : 1200;
+            let numParticles = Math.min(w, h) < 500 ? 500 : 1000;
             let heartScale = Math.min(w, h) * 0.20;
 
             let count = 0;
@@ -486,7 +486,7 @@ let beatScale = 1 + Math.sin(heartBeat) * 0.18;
             if (!isRunning) return;
 
             if (sequenceTick > 0) sequenceTick++;
-            if (sequenceTick > 550) sequenceTick = 0;
+            if (sequenceTick > 500) sequenceTick = 0;
 
             // Sinh Sao Chổi ngẫu nhiên
             if (sequenceTick === 0) {
@@ -588,7 +588,7 @@ let beatScale = 1 + Math.sin(heartBeat) * 0.18;
                     ctx.beginPath();
                     ctx.arc(proj.screenX, proj.screenY, c.size * proj.scale, 0, Math.PI * 2);
                     ctx.fillStyle = '#ffffff';
-                    ctx.shadowBlur = 30 * proj.scale;
+                    ctx.shadowBlur = 8 * proj.scale;
                     ctx.shadowColor = c.color;
                     ctx.fill();
                     ctx.shadowBlur = 0;
